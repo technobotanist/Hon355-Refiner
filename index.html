@@ -83,7 +83,6 @@
       .hero p,
       .intro-note,
       .step-goal,
-      .field-help,
       .prompt-help {
         color: var(--muted);
         line-height: 1.6;
@@ -532,11 +531,7 @@
             promptBox.value = buildPrompt();
           });
 
-          const help = document.createElement("p");
-          help.className = "field-help";
-          help.textContent = field.placeholder;
-
-          wrapper.append(label, textarea, help);
+          wrapper.append(label, textarea);
           formContainer.appendChild(wrapper);
         });
       };
@@ -553,7 +548,7 @@
         }
       };
 
-      const fallbackCopy = async (text) => {
+      const fallbackCopy = (text) => {
         const temp = document.createElement("textarea");
         temp.value = text;
         temp.setAttribute("readonly", "");
@@ -571,7 +566,7 @@
           if (navigator.clipboard && window.isSecureContext) {
             await navigator.clipboard.writeText(text);
           } else {
-            await fallbackCopy(text);
+            fallbackCopy(text);
           }
           setStatus("Prompt copied.");
         } catch (error) {
@@ -584,7 +579,9 @@
         Object.keys(initialForm).forEach((key) => {
           form[key] = "";
         });
-        formContainer.reset();
+        formContainer.querySelectorAll("textarea").forEach((textarea) => {
+          textarea.value = "";
+        });
         promptBox.value = buildPrompt();
         setStatus("");
       };
