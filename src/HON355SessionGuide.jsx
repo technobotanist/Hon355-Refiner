@@ -101,7 +101,7 @@ export default function HON355SessionGuide() {
     <div className="min-h-screen bg-[#FFFFFF] text-[#000000]">
       <div className="h-3 w-full bg-[#CC0000]" />
       <div className="mx-auto max-w-7xl px-6 py-8 md:px-10 lg:px-12">
-        <header className="mb-8 grid gap-6 lg:grid-cols-[1.2fr_1.1fr]">
+        <header className="mb-8 grid gap-6 lg:grid-cols-[1.3fr_1fr]">
           <div className="rounded-[1.5rem] border border-black/10 bg-white p-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.2)]">
             <div className="mb-4 inline-flex rounded-full bg-[#CC0000] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
               NC State Libraries • HON 355 Project Worksheet
@@ -127,25 +127,23 @@ export default function HON355SessionGuide() {
             <p className="mt-2 text-sm leading-6 text-black/75">
               Open the shared Gemini conversation partner for this workshop and use it to test, narrow, and strengthen your project idea.
             </p>
-            <div className="mt-5">
-              <div className="space-y-3 text-sm text-black/80">
-                <a
-                  href="https://gemini.google.com/gem/1whwwZrisG-Gyu3Q72cxAwh5rMHrigg-9?usp=sharing"
-                  className="block rounded-2xl border border-black/10 bg-white px-4 py-3 font-semibold text-[#CC0000] hover:bg-[#FFF5F5] break-all"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Open the Gemini Project Refiner
-                </a>
-                <div className="rounded-2xl border border-black/10 bg-white p-4">
-                  <div className="font-semibold text-black">Use it for:</div>
-                  <ul className="mt-2 space-y-1 text-black/75">
-                    <li>Refining a topic into a research question</li>
-                    <li>Testing whether a question is still too broad</li>
-                    <li>Comparing medium options</li>
-                    <li>Spotting weak or generic phrasing</li>
-                  </ul>
-                </div>
+            <div className="mt-5 space-y-3 text-sm text-black/80">
+              <a
+                href="https://gemini.google.com/gem/1whwwZrisG-Gyu3Q72cxAwh5rMHrigg-9?usp=sharing"
+                className="inline-flex rounded-2xl border border-black/10 bg-white px-4 py-3 font-semibold text-[#CC0000] hover:bg-[#FFF5F5]"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open the Gemini Project Refiner
+              </a>
+              <div className="rounded-2xl border border-black/10 bg-white p-4">
+                <div className="font-semibold text-black">Use it for:</div>
+                <ul className="mt-2 space-y-1 text-black/75">
+                  <li>Refining a topic into a research question</li>
+                  <li>Testing whether a question is still too broad</li>
+                  <li>Comparing medium options</li>
+                  <li>Spotting weak or generic phrasing</li>
+                </ul>
               </div>
             </div>
           </div>
