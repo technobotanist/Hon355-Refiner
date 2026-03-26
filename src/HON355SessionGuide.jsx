@@ -1,61 +1,5 @@
 import { useMemo, useState } from "react";
 
-const steps = [
-    {
-      title: "1. Start with a topic, not a thesis",
-      time: "0 to 10 min",
-      goal: "Get students from broad interest to a workable area of inquiry.",
-      prompts: [
-        "What are you actually interested in within technology and lived experience?",
-        "What case, platform, population, or example are you really talking about?",
-        "What seems unsettled, contradictory, or worth arguing about?",
-      ],
-    },
-    {
-      title: "2. Use QFC logic to pressure-test the idea",
-      time: "10 to 25 min",
-      goal: "Move from quote and concept to tension, stakes, and hypothesis.",
-      prompts: [
-        "What quotation, reading, or concept from class is relevant here?",
-        "What tension does that text raise?",
-        "Why does that question matter for understanding the author or course theme?",
-        "What is your current best answer or hypothesis?",
-      ],
-    },
-    {
-      title: "3. Refine with the Project Refiner tool",
-      time: "25 to 45 min",
-      goal: "Use Gemini as a conversation partner, not a ghostwriter.",
-      prompts: [
-        "Paste your topic, what you want to understand, why it matters, and any course reading.",
-        "Answer the tool's clarifying questions honestly and specifically.",
-        "Mark one suggestion that helped and one that was vague or weak.",
-        "Revise your research question yourself. Do not keep the first AI version unchanged.",
-      ],
-    },
-    {
-      title: "4. Match medium to argument and audience",
-      time: "45 to 60 min",
-      goal: "Choose the format that best carries the idea.",
-      prompts: [
-        "Would this work best as a paper, podcast, website, video, or presentation?",
-        "Who is the audience?",
-        "Why does that format help this argument travel better than the alternatives?",
-      ],
-    },
-    {
-      title: "5. Leave with a proposal skeleton",
-      time: "60 to 75 min",
-      goal: "Produce a usable next draft, not a perfect final plan.",
-      prompts: [
-        "Write 2 to 3 sentences on description and aims.",
-        "Draft 3 objectives.",
-        "Draft 3 timeline milestones.",
-        "List key influences, readings, and likely sources.",
-      ],
-    },
-  ];
-
 const fields = [
     {
       id: "topic",
@@ -157,7 +101,7 @@ export default function HON355SessionGuide() {
     <div className="min-h-screen bg-[#FFFFFF] text-[#000000]">
       <div className="h-3 w-full bg-[#CC0000]" />
       <div className="mx-auto max-w-7xl px-6 py-8 md:px-10 lg:px-12">
-        <header className="mb-8 grid gap-6 lg:grid-cols-[1.35fr_0.95fr]">
+        <header className="mb-8 grid gap-6 lg:grid-cols-[1.2fr_1.1fr]">
           <div className="rounded-[1.5rem] border border-black/10 bg-white p-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.2)]">
             <div className="mb-4 inline-flex rounded-full bg-[#CC0000] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
               NC State Libraries • HON 355 Project Worksheet
@@ -181,17 +125,17 @@ export default function HON355SessionGuide() {
             <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-black/55">Session Tool</div>
             <h2 className="text-xl font-semibold">HON 355 Project Refiner</h2>
             <p className="mt-2 text-sm leading-6 text-black/75">
-              Scan the QR code or open the short link to use the custom Gemini conversation partner for this workshop.
+              Open the shared Gemini conversation partner for this workshop and use it to test, narrow, and strengthen your project idea.
             </p>
-            <div className="mt-5 grid items-center gap-5 sm:grid-cols-[1fr_128px]">
+            <div className="mt-5">
               <div className="space-y-3 text-sm text-black/80">
                 <a
-                  href="https://go.ncsu.edu/hon355-project-refiner"
-                  className="block rounded-2xl border border-black/10 bg-white px-4 py-3 font-semibold text-[#CC0000] hover:bg-[#FFF5F5]"
+                  href="https://gemini.google.com/gem/1whwwZrisG-Gyu3Q72cxAwh5rMHrigg-9?usp=sharing"
+                  className="block rounded-2xl border border-black/10 bg-white px-4 py-3 font-semibold text-[#CC0000] hover:bg-[#FFF5F5] break-all"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  go.ncsu.edu/hon355-project-refiner
+                  Open the Gemini Project Refiner
                 </a>
                 <div className="rounded-2xl border border-black/10 bg-white p-4">
                   <div className="font-semibold text-black">Use it for:</div>
@@ -202,13 +146,6 @@ export default function HON355SessionGuide() {
                     <li>Spotting weak or generic phrasing</li>
                   </ul>
                 </div>
-              </div>
-              <div className="flex justify-center">
-                <img
-                  src="https://go.ncsu.edu/hon355-project-refiner.qr"
-                  alt="QR code for HON 355 Project Refiner"
-                  className="h-32 w-32 rounded-2xl border border-black/10 bg-white p-2"
-                />
               </div>
             </div>
           </div>
@@ -246,42 +183,6 @@ export default function HON355SessionGuide() {
               <li>Revise the AI&apos;s wording yourself before keeping any of it.</li>
               <li>Be able to explain what you kept, what you discarded, and why.</li>
             </ul>
-          </div>
-        </section>
-
-        <section className="mb-8 rounded-[1.5rem] border border-black/10 bg-white p-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.16)]">
-          <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-black/55">Run of show</div>
-              <h2 className="text-2xl font-semibold">Workshop flow</h2>
-            </div>
-            <div className="text-sm text-black/55">A 60 to 75 minute plan for moving your idea forward</div>
-          </div>
-
-          <div className="grid gap-4">
-            {steps.map((step, idx) => (
-              <div key={step.title} className="rounded-2xl border border-black/10 bg-[#F7F7F7] p-5">
-                <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                  <div>
-                    <h3 className="text-lg font-semibold text-black">{step.title}</h3>
-                    <p className="mt-1 text-sm text-black/70">{step.goal}</p>
-                  </div>
-                  <div
-                    className="rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white"
-                    style={{ backgroundColor: ["#CC0000", "#000000", "#427E93", "#008473", "#6F7D1C"][idx] }}
-                  >
-                    {step.time}
-                  </div>
-                </div>
-                <div className="mt-4 grid gap-2 md:grid-cols-2">
-                  {step.prompts.map((prompt) => (
-                    <div key={prompt} className="rounded-xl border border-black/10 bg-white p-3 text-sm text-black/80">
-                      {prompt}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
           </div>
         </section>
 
@@ -337,7 +238,7 @@ export default function HON355SessionGuide() {
                   {copied ? "Copied" : "Copy prompt"}
                 </button>
                 <a
-                  href="https://go.ncsu.edu/hon355-project-refiner"
+                  href="https://gemini.google.com/gem/1whwwZrisG-Gyu3Q72cxAwh5rMHrigg-9?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-2xl border border-black/10 px-4 py-2 text-sm font-semibold text-black hover:bg-[#F7F7F7]"
