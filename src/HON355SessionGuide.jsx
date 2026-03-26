@@ -51,7 +51,7 @@ const steps = [
         "Write 2 to 3 sentences on description and aims.",
         "Draft 3 objectives.",
         "Draft 3 timeline milestones.",
-        "List intellectual debts and likely sources.",
+        "List key influences, readings, and likely sources.",
       ],
     },
   ];
@@ -160,7 +160,7 @@ export default function HON355SessionGuide() {
         <header className="mb-8 grid gap-6 lg:grid-cols-[1.35fr_0.95fr]">
           <div className="rounded-[1.5rem] border border-black/10 bg-white p-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.2)]">
             <div className="mb-4 inline-flex rounded-full bg-[#CC0000] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
-              NC State Libraries • HON 355 Workshop Guide
+              NC State Libraries • HON 355 Project Worksheet
             </div>
             <h1 className="mb-3 text-3xl font-semibold tracking-tight md:text-5xl">
               From broad topic to focused project question
@@ -216,7 +216,7 @@ export default function HON355SessionGuide() {
 
         <section className="mb-8 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-[1.5rem] border border-black/10 bg-white p-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.16)]">
-            <h3 className="text-xl font-semibold">What today is trying to do</h3>
+            <h3 className="text-xl font-semibold">What you will do today</h3>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               {[
                 "Narrow a broad idea into a specific topic",
@@ -255,7 +255,7 @@ export default function HON355SessionGuide() {
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-black/55">Run of show</div>
               <h2 className="text-2xl font-semibold">Workshop flow</h2>
             </div>
-            <div className="text-sm text-black/55">Single-session guide for a 60 to 75 minute class</div>
+            <div className="text-sm text-black/55">A 60 to 75 minute plan for moving your idea forward</div>
           </div>
 
           <div className="grid gap-4">
@@ -349,7 +349,7 @@ export default function HON355SessionGuide() {
 
             <div className="rounded-[1.5rem] border border-black/10 bg-white p-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.16)]">
               <div className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-black/55">Discussion prompts</div>
-              <h3 className="text-xl font-semibold">Use these to keep the room moving</h3>
+              <h3 className="text-xl font-semibold">Use these to test your idea</h3>
               <div className="mt-4 space-y-3 text-sm leading-6 text-black/75">
                 <PromptCard accent="#CC0000" text="What makes this a question instead of just a topic?" />
                 <PromptCard accent="#427E93" text="Where is the tension, contradiction, or unresolved issue?" />
@@ -360,7 +360,7 @@ export default function HON355SessionGuide() {
             </div>
 
             <div className="rounded-[1.5rem] border border-black/10 bg-white p-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.16)]">
-              <div className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-black/55">Exit target</div>
+              <div className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-black/55">Leave with</div>
               <h3 className="text-xl font-semibold">What students should leave with</h3>
               <ul className="mt-4 space-y-3 text-sm text-black/75">
                 <li>A narrowed project topic</li>
